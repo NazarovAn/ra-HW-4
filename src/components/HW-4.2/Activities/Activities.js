@@ -1,12 +1,12 @@
 import React from 'react'
 import './Activities.css'
-import ListHeader from './Header'
+import Header from './Header'
 import List from './List'
 
 export default function Activities() {
   return (
     <div className="tracker__activities">
-      <ListHeader />
+      <Header />
       <List />
     </div>
   )
