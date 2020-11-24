@@ -1,0 +1,31 @@
+.activities__header {
+  padding: 1rem;
+}
+
+.activities__header_date,
+.activities__header_distance {
+  margin-right: 100px;
+}
+
+.activities__list {
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.activities__list_item,
+.activities__item_actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 1rem 0 1rem;
+}
+
+.activities__list_item:first-child {
+  padding-top: 0;
+}
+
+.activities__item_edit {
+  margin-right: .8rem;
+}
