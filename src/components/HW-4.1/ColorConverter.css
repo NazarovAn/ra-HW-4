@@ -1,0 +1,11 @@
+.color_converter__wrapper {
+  background-color: aquamarine;
+  min-height: 100vh;
+  position: relative;
+}
+
+.color_converter__form {
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 85px);
+}

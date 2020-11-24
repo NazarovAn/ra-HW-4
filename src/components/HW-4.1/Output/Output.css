@@ -1,0 +1,10 @@
+.color_converter__output {
+  text-align: center;
+  width: 170px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+}
