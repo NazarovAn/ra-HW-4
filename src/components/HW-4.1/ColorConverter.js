@@ -9,7 +9,7 @@ export default function ColorConverter() {
     if (val.length !== 7) {
       return;
     }
-    const regex = /^#([A-F,a-f,0-9]+)$/;  
+    const regex = /^#([A-Fa-f0-9]+)$/;  
 
     if (regex.test(val)) {
       const r = parseInt(val.slice(1,3), 16);

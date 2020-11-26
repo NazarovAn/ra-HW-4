@@ -26,4 +26,10 @@
 .form__input_submit {
   width: 100px;
   background-color: #fff;
+  cursor: pointer;
+}
+
+.form__input_submit:active {
+  width: 98px;
+  height: 43px;
 }

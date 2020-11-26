@@ -1,12 +1,18 @@
 import React from 'react'
 import ListItem from './ListItem'
 
-export default function List() {
+export default function List(props) {
   return (
     <ul className="activities__list">
-      <ListItem dist="13.4" />
-      <ListItem dist="2" />
-      <ListItem dist="20" />
+      { props.list.map((item) => 
+        <ListItem 
+          date={ item.date }
+          distance={ item.distance }
+          id={ item.id }
+          key={ item.id }
+          onItemRemove={ props.onItemRemove }
+          onItemEdit={ props.onItemEdit }
+        />) } 
     </ul>
   )
 }

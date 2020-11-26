@@ -3,11 +3,12 @@ import './Form.css'
 import FormInput from './FormInput'
 import FormHeader from './FormHeader'
 
-export default function Form() {
+export default function Form(props) {
+
   return (
     <form className="tracker__form">
       <FormHeader />
-      <FormInput />
+      <FormInput onFormSubmit={ props.onFormSubmit } />
     </form>
   )
 }

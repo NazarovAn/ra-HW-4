@@ -28,4 +28,17 @@
 
 .activities__item_edit {
   margin-right: .8rem;
+  cursor: pointer;
+}
+
+.activities__item_edit:active {
+  opacity: 0.5;
+}
+
+.activities__item_remove {
+  cursor: pointer;
+}
+
+.activities__item_remove:active {
+  opacity: 0.5;
 }
