@@ -1,0 +1,32 @@
+.photo_manager__frame {
+  margin: auto;
+  padding: 40px 10px;
+  background-color: gray;
+  border-radius: 40px;
+  width: 80%;
+}
+
+.photo_manager__container {
+  box-sizing: border-box;
+  background: linear-gradient( #bbb, transparent 1px), linear-gradient( 90deg, #bbb, transparent 1px);
+  background-color: white;
+	background-size: 20px 20px;
+	background-position: center center;
+
+  width: 100%;
+  min-height: 500px;
+  margin: auto;
+  border: 2px black solid;
+  display: flex;
+  flex-direction: column;
+  padding: 23px;
+}
+
+/* #file-input {
+  position: absolute;
+  top: -1000px;
+} */
+
+/* .hidden {
+  display: none;
+} */

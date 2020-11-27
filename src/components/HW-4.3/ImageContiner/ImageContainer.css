@@ -1,0 +1,5 @@
+.photo_manager__img_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

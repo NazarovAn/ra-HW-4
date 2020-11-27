@@ -1,0 +1,16 @@
+.photo_manager__select {
+  width: 65%;
+  min-height: 180px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+  align-self: center;
+  margin-bottom: 40px;
+}
+
+.photo_manager__select {
+  text-align: center;
+  font-size: 25px;
+  padding-top: 3.5rem;
+  box-sizing: border-box;
+}
