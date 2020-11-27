@@ -4,34 +4,36 @@ import ImageContainer from './ImageContiner/ImageContainer'
 import Input from './Input/Input'
 import { nanoid } from 'nanoid'
 
-
-const test = [
-  {
-    url:"https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/hero-images/advice/maps-satellite-images/satellite-image-of-globe.jpg",
-    id: nanoid(),
-  },
-  {
-    url:"https://www.freedigitalphotos.net/images/img/homepage/394230.jpg",
-    id: nanoid(),
-  },
-  {
-    url:"https://static.toiimg.com/photo/72975551.cms",
-    id: nanoid(),
-  },
-]
-
 export default function PhotoManager() {
-  const [images, setImages] = useState(test);
+  const [images, setImages] = useState([]);
 
-  const handleNewImages = (images) => {
-    console.dir(images);
+  const fileToDataUrl = file => {
+    return new Promise((resolve, reject) => {
+      const fileReader = new FileReader();
+    
+      fileReader.addEventListener('load', evt => {
+        resolve({ url:evt.currentTarget.result, name: file.name, id: nanoid()});
+      });
+      
+      fileReader.addEventListener('error', evt => {
+        reject(new Error(evt.currentTarget.error));
+      });
+      
+      fileReader.readAsDataURL(file);
+    });
   }
+
+  const handleSelect = async (images) => {
+    const urls = await Promise.all(images.map(o => fileToDataUrl(o)));
+    setImages((prev) => ([...prev, ...urls]))
+}
+  
 
   return (
     <div className="photo_manager">
       <div className="photo_manager__frame">
         <div className="photo_manager__container">
-          <Input onNewImages={ handleNewImages } />
+          <Input onNewImages={ handleSelect } />
           <ImageContainer images={ images } onRemove={ setImages } />
         </div>
       </div>

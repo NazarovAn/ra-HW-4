@@ -3,7 +3,9 @@
   padding: 40px 10px;
   background-color: gray;
   border-radius: 40px;
-  width: 80%;
+  width: 95%;
+  box-shadow: 0 0 10px 4px black;
+  margin: 1rem auto;
 }
 
 .photo_manager__container {
@@ -21,12 +23,3 @@
   flex-direction: column;
   padding: 23px;
 }
-
-/* #file-input {
-  position: absolute;
-  top: -1000px;
-} */
-
-/* .hidden {
-  display: none;
-} */

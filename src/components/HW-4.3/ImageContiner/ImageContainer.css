@@ -1,5 +1,7 @@
 .photo_manager__img_container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
 }

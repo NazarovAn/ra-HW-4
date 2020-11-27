@@ -9,7 +9,14 @@ export default function ImageContainer(props) {
 
   return (
     <div className="photo_manager__img_container">
-      { props.images.map((image) => <Image url={ image.url } id={ image.id } key={ image.id } onRemove={ handleRemove }/>) }
+      { props.images.map((image) => 
+        <Image 
+          url={ image.url }
+          name={ image.name }
+          id={image.id}
+          key={ image.id }
+          onRemove={ handleRemove }
+        />) }
     </div>
   )
 }
