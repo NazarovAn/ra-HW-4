@@ -4,8 +4,8 @@ import './Input.css'
 export default function Input(props) {
   const fileRef = useRef();
 
-  const handleSubmit = (evt) => {
-    evt.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
     props.onNewImages([...fileRef.current.files]);
   }
 
