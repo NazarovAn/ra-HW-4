@@ -7,7 +7,7 @@ import { nanoid } from 'nanoid'
 export default function PhotoManager() {
   const [images, setImages] = useState([]);
 
-  const fileToDataUrl = (file) => {
+  const fileToImageObject = (file) => {
     return new Promise((resolve, reject) => {
       const fileReader = new FileReader();
     
@@ -24,7 +24,7 @@ export default function PhotoManager() {
   }
 
   const handleSelect = async (images) => {
-    const newImages = await Promise.all(images.map(o => fileToDataUrl(o)));
+    const newImages = await Promise.all(images.map(o => fileToImageObject(o)));
     setImages((prev) => ([...prev, ...newImages]))
   }
 
